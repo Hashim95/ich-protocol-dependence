@@ -17,20 +17,22 @@ deterministically from the RSNA study manifest; the hash was verified identical
 on two machines running different PyTorch versions.
 
 ## Pipeline
-00_preprocess_to_memmap.py DICOM -> uint8 memmap, shared windowing
-01_prepare_manifests.py slice/study manifests
-01b_prepare_split.py held-out test + 5 patient-disjoint folds
-02_train_stage1.py slice classifier (--backbone, --loss)
-03a_extract_features.py frozen backbone -> cached embeddings
-03c_conditional_subtype.py Stage-2 conditional / joint heads
-04_evaluate.py pooled OOF metrics + paired bootstrap
-05b_smooth_any.py sequence smoothing for any prediction file
-06b_bhsd_prepare.py BHSD external cohort
-07_cq500_evaluate.py CQ500 external cohort
-08_paper_figures.py figures + metrics tables
-09_clinical_utility.py sens@spec, decision curves, workload
-10_wsgsa_baseline.py base-method re-implementation
-11_build_tables.py assembles all paper tables
+00_preprocess_to_memmap.py   DICOM -> uint8 memmap, shared windowing
+01_prepare_manifests.py      slice/study manifests
+01b_prepare_split.py         held-out test + 5 patient-disjoint folds
+02_train_stage1.py           slice classifier (--backbone, --loss)
+03a_extract_features.py      frozen backbone -> cached embeddings
+03c_conditional_subtype.py   Stage-2 conditional / joint heads
+04_evaluate.py               pooled OOF metrics + paired bootstrap
+05b_smooth_any.py            sequence smoothing for any prediction file
+06b_bhsd_prepare.py          BHSD external cohort
+07_cq500_evaluate.py         CQ500 external cohort
+08_paper_figures.py          figures + metrics tables
+09_clinical_utility.py       sens@spec, decision curves, workload
+10_wsgsa_baseline.py         base-method re-implementation
+11_build_tables.py           assembles all paper tables
+
+
 ## Protocol
 
 Fixed 10-epoch schedule, final-epoch model reported, no metric-based checkpoint
