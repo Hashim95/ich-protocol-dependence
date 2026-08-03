@@ -1,0 +1,7 @@
+*.dat
+*.npz
+*.pt
+*.dcm
+*.nii*
+__pycache__/
+*.pyc

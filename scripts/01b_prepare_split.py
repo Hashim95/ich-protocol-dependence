@@ -63,7 +63,7 @@ USAGE
     python 01b_prepare_split.py --dry-run       # report only, write nothing
     python 01b_prepare_split.py --test-frac 0.2 --seed 42
 """
-import argparse, json, hashlib, shutil, sys, datetime
+import argparse, json, hashlib, shutil, sys, datetime, os
 from pathlib import Path
 
 import numpy as np
