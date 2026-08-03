@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\caption{External validation on two independent cohorts, neither used in development.}
+\begin{tabular}{lrrrrr}
+\toprule
+Cohort & Class & n pos & AUC [95% CI] & AP & F1@0.5 \\
+\midrule
+CQ500 (scan level) & EDH & 12 & 0.805 [0.613, 0.978] & 0.648 & 0.500 \\
+CQ500 (scan level) & IPH & 129 & 0.805 [0.747, 0.856] & 0.765 & 0.695 \\
+CQ500 (scan level) & IVH & 26 & 0.873 [0.758, 0.968] & 0.727 & 0.689 \\
+CQ500 (scan level) & SAH & 57 & 0.867 [0.790, 0.932] & 0.731 & 0.661 \\
+CQ500 (scan level) & SDH & 49 & 0.775 [0.677, 0.871] & 0.593 & 0.535 \\
+CQ500 (scan level) & Any & 197 & 0.807 [0.761, 0.853] & 0.845 & 0.776 \\
+BHSD (volume level) & EDH & 23 & 0.831 [0.738, 0.913] & 0.560 & 0.160 \\
+BHSD (volume level) & IPH & 127 & 0.917 [0.870, 0.957] & 0.951 & 0.901 \\
+BHSD (volume level) & IVH & 104 & 0.884 [0.835, 0.927] & 0.911 & 0.747 \\
+BHSD (volume level) & SAH & 109 & 0.786 [0.716, 0.844] & 0.855 & 0.749 \\
+BHSD (volume level) & SDH & 70 & 0.821 [0.757, 0.876] & 0.765 & 0.659 \\
+BHSD (volume level) & MACRO & 433 & 0.848 [0.783, 0.903] & 0.808 & 0.643 \\
+\bottomrule
+\end{tabular}
+\\[2pt]
+\footnotesize Average precision is not comparable across cohorts: EDH prevalence differs by an order of magnitude (1.6% internally, 2.6% in CQ500, 12.0% in BHSD). BHSD contains no hemorrhage-negative volumes and therefore evaluates subtype discrimination among positive scans rather than detection. EDH positive counts are small in both cohorts; intervals are reported throughout.
+\end{table}

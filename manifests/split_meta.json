@@ -1,0 +1,14 @@
+{
+  "created": "20260726_212245",
+  "seed": 42,
+  "n_folds": 5,
+  "test_frac": 0.2,
+  "outer_strat": "edh_any",
+  "inner_strat": "edh_any",
+  "n_studies_total": 21744,
+  "n_test": 4348,
+  "n_dev": 17396,
+  "edh_test": 70,
+  "edh_dev": 284,
+  "assignment_sha256_16": "f72016749123e8ce"
+}

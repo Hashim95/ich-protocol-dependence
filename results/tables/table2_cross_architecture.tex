@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Rare-subtype precision across architecture families under identical training conditions (final-epoch models, five folds each).}
+\begin{tabular}{lrrrrr}
+\toprule
+Backbone & Folds & Macro-AUC & EDH AUC & EDH AP & EDH AP (best epoch) \\
+\midrule
+ConvNeXt-tiny & 5 & 0.9442 ± 0.0016 & 0.8609 ± 0.0127 & 0.1287 ± 0.0300 & 0.1497 \\
+ResNet50 & 5 & 0.9587 ± 0.0031 & 0.9044 ± 0.0181 & 0.1332 ± 0.0324 & 0.1447 \\
+EfficientNet-B4 & 5 & 0.9295 ± 0.0033 & 0.8057 ± 0.0246 & 0.1162 ± 0.0239 & 0.1296 \\
+DenseNet-161 & 1 & 0.9545 & 0.9149 & 0.1127 & 0.1649 \\
+\bottomrule
+\end{tabular}
+\\[2pt]
+\footnotesize All architectures share identical folds, preprocessing, loss, sampler, schedule, and learning rates; hyperparameters were selected for ConvNeXt-tiny and not re-tuned, so comparator performance is a lower bound. Between-fold variance in EDH AP (6.82e-04) exceeds between-architecture variance (7.69e-05) by 8.9x. All architectures performed worst on fold 4.
+\end{table}

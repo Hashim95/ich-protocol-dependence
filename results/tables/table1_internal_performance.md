@@ -1,0 +1,13 @@
+**Internal performance, pooled out-of-fold across development studies (patient-disjoint five-fold cross-validation).**
+
+| Class   |   n pos | AUC [95% CI]         | AP [95% CI]          |   Brier |   Sens@0.5 |   Spec@0.5 |   Prec@0.5 |   F1@0.5 |
+|:--------|--------:|:---------------------|:---------------------|--------:|-----------:|-----------:|-----------:|---------:|
+| EDH     |     284 | 0.888 [0.868, 0.908] | 0.206 [0.164, 0.257] |   0.017 |      0.134 |      0.996 |      0.336 |    0.191 |
+| IPH     |    4272 | 0.969 [0.966, 0.972] | 0.927 [0.920, 0.934] |   0.061 |      0.863 |      0.954 |      0.86  |    0.862 |
+| IVH     |    2936 | 0.984 [0.982, 0.986] | 0.939 [0.931, 0.945] |   0.039 |      0.891 |      0.97  |      0.858 |    0.875 |
+| SAH     |    3134 | 0.937 [0.932, 0.941] | 0.819 [0.808, 0.831] |   0.085 |      0.708 |      0.947 |      0.747 |    0.727 |
+| SDH     |    3027 | 0.944 [0.939, 0.949] | 0.818 [0.805, 0.831] |   0.078 |      0.726 |      0.953 |      0.765 |    0.745 |
+| Any     |    7106 | 0.971 [0.969, 0.974] | 0.964 [0.961, 0.967] |   0.065 |      0.915 |      0.938 |      0.911 |    0.913 |
+| MACRO   |   20759 | 0.949 [0.945, 0.952] | 0.779                |   0.058 |      0.706 |      0.96  |      0.746 |    0.719 |
+
+*Point estimates are plug-in values; intervals are percentile bootstrap (1,000 resamples). Macro-AUC intervals resample studies once per draw and average all class AUCs within that draw. Threshold-dependent metrics use a fixed 0.5 threshold.*
