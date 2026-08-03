@@ -32,7 +32,7 @@ from sklearn.metrics import (roc_auc_score, average_precision_score,
                              f1_score, fbeta_score)
 warnings.filterwarnings("ignore")
 
-ROOT = Path("/home/ivision/Documents/Hashim/RSNA ICH Dataset/rsna-intracranial-hemorrhage-detection")
+import os; ROOT = Path(os.environ.get("ICH_ROOT", "/path/to/rsna-intracranial-hemorrhage-detection"))
 S1 = ROOT / "stage1_runs"
 # WsGSA class order for side-by-side: they list SAH,IPH,SDH,EDH,IVH + any.
 # We keep our order and label clearly.

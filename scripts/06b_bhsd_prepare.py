@@ -65,7 +65,7 @@ from ich_config import (ROOT, S1_DIR, ALL_COLS, SUBTYPES, WINDOWS,
 setup_hardware()
 
 BHSD = Path(__import__("os").environ.get(
-    "ICH_BHSD", "/home/ivision/Documents/Hashim/BHSD/archive"))
+    "ICH_BHSD", "/path/to/BHSD/archive"))
 OUT = ROOT / "bhsd"; OUT.mkdir(parents=True, exist_ok=True)
 RESULTS = ROOT / "results"; RESULTS.mkdir(parents=True, exist_ok=True)
 

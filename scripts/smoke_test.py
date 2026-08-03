@@ -2,7 +2,7 @@
 import pandas as pd, pydicom, numpy as np, glob
 from pathlib import Path
 
-ROOT = Path("/home/ivision/Documents/Hashim/RSNA ICH Dataset/rsna-intracranial-hemorrhage-detection")
+import os; ROOT = Path(os.environ.get("ICH_ROOT", "/path/to/rsna-intracranial-hemorrhage-detection"))
 csv  = ROOT / "stage_2_train.csv"
 dcmdir = ROOT / "stage_2_train"
 
