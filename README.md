@@ -54,3 +54,25 @@ are not redistributed here.
 ## Citation
 
 [to be added on acceptance]
+
+## Setup
+
+Set environment variables pointing to your local dataset locations prior to running any scripts:
+
+```bash
+export ICH_ROOT=/path/to/rsna-intracranial-hemorrhage-detection
+export ICH_CQ=/path/to/CQ500
+export ICH_BHSD=/path/to/BHSD/archive
+export ICH_STORE_RES=384
+export ICH_TRAIN_RES=384
+
+## Setup
+
+Set environment variables pointing to your local dataset locations prior to running any scripts:
+
+```bash
+export ICH_ROOT=/path/to/rsna-intracranial-hemorrhage-detection
+export ICH_CQ=/path/to/CQ500
+export ICH_BHSD=/path/to/BHSD/archive
+export ICH_STORE_RES=384
+export ICH_TRAIN_RES=384
