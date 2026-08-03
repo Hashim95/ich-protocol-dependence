@@ -71,8 +71,7 @@ import pandas as pd
 from sklearn.model_selection import StratifiedGroupKFold
 
 # ----------------------------------------------------------------------------- #
-ROOT     = Path("/path/to/rsna-intracranial-hemorrhage-detection"
-                "rsna-intracranial-hemorrhage-detection")
+ROOT = Path(os.environ.get("ICH_ROOT", "/path/to/rsna-intracranial-hemorrhage-detection"))
 OUT_DIR  = ROOT / "manifests"
 SUBTYPES = ["epidural", "intraparenchymal", "intraventricular",
             "subarachnoid", "subdural"]
