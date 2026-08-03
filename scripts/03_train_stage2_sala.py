@@ -70,7 +70,7 @@ from tqdm import tqdm
 warnings.filterwarnings("ignore")
 
 # ============================================================================= #
-ROOT     = Path("/path/to/rsna-intracranial-hemorrhage-detection")
+ROOT = Path(os.environ.get("ICH_ROOT", "/path/to/rsna-intracranial-hemorrhage-detection"))
 MAN_DIR  = ROOT / "manifests"
 OUT_DIR  = ROOT / "stage2_runs"
 SUBTYPES = ["epidural", "intraparenchymal", "intraventricular", "subarachnoid", "subdural"]

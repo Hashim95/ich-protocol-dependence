@@ -27,7 +27,7 @@ from pathlib import Path
 import numpy as np
 warnings.filterwarnings("ignore")
 
-import os; ROOT = Path(os.environ.get("ICH_ROOT", "/path/to/rsna-intracranial-hemorrhage-detection"))
+ROOT = Path(os.environ.get("ICH_ROOT", "/path/to/rsna-intracranial-hemorrhage-detection"))
 OUT_DIR=ROOT/"stage1_runs"
 
 

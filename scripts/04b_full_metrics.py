@@ -28,7 +28,7 @@ from sklearn.metrics import (roc_auc_score, average_precision_score,
                              f1_score, fbeta_score)
 warnings.filterwarnings("ignore")
 
-import os; ROOT = Path(os.environ.get("ICH_ROOT", "/path/to/rsna-intracranial-hemorrhage-detection"))
+ROOT = Path(os.environ.get("ICH_ROOT", "/path/to/rsna-intracranial-hemorrhage-detection"))
 RUNS = ROOT / "stage2_runs"
 SUBTYPES = ["epidural","intraparenchymal","intraventricular","subarachnoid","subdural"]
 ALL_COLS = SUBTYPES + ["any"]
