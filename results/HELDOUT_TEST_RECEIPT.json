@@ -1,0 +1,16 @@
+{
+  "scored_at": "20260806_102602",
+  "n_studies": 4348,
+  "n_slices": 150107,
+  "positives": {
+    "epidural": 70,
+    "intraparenchymal": 1049,
+    "intraventricular": 756,
+    "subarachnoid": 798,
+    "subdural": 785,
+    "any": 1776
+  },
+  "pipeline": "ConvNeXt-tiny logit-adjusted -> conditional head, 5-fold ensemble",
+  "threshold": 0.5,
+  "note": "Scored once. Do not re-score."
+}
