@@ -1,0 +1,16 @@
+Study,Data,Level,EDH metric,Patient-disjoint,External,CI
+Chang et al. 2018,Private,Exam,Pooled with SDH,Not stated,Yes,No
+Ye et al. 2019,Private,Subject,"F1 0.55, AUC 0.90",Stated,No,No
+Lee et al. 2020,Private,Patient,Pooled with SDH,Stated,No,No
+Wang et al. 2021,"RSNA, CQ500, PhysioNet",Slice -> scan,AUC 0.984 / 0.980 / 0.953,Not stated,Yes,Yes
+Angkurawaranon et al. 2023,Private,Scan,Sensitivity 0.72,Stated,No,No
+Kang et al. 2023,"RSNA, AI-Hub",Slice,Not reported,Not stated,Yes,Yes
+Yeo et al. 2023,"RSNA, CQ500",Slice -> scan,"Sensitivity 1.00 [0.54, 1.00]",Not stated,Yes,Yes
+Abrigo et al. 2023,"RSNA, PWH",Slice -> scan,Pooled with SDH,Not stated,Yes,Yes
+Zhang et al. 2023,RSNA,Slice,"F1 0.467, AUC 0.998",Not stated,No,No
+Chetla et al. 2025,PhysioNet,Scan,"Prec. 1.00, rec. 0.14, F1 0.25",n/a (zero-shot),No,Yes
+Liu et al. 2025,"RSNA, CQ500, +2",Patient,AP 0.558,Stated,Yes,Yes
+Wang et al. 2025,BHSD,Slice,Macro-averaged only,No,No,No
+Chaudhary et al. 2025,RSNA,Slice,F1 0.83,Stated,No,Yes
+Chagahi et al. 2025,Private,Slice -> scan,Macro-averaged only,Stated,No,Yes
+This work,RSNA,Slice,"F1 0.151 [0.133, 0.168]",Stated,Yes (2),Yes
