@@ -1,6 +1,3 @@
-\begin{table}[t]
-\centering
-\caption{Internal performance, pooled out-of-fold across development studies (patient-disjoint five-fold cross-validation).}
 \begin{tabular}{lrrrrrrrr}
 \toprule
 Class & n pos & AUC [95% CI] & AP [95% CI] & Brier & Sens@0.5 & Spec@0.5 & Prec@0.5 & F1@0.5 \\
@@ -14,6 +11,6 @@ Any & 7106 & 0.971 [0.969, 0.974] & 0.964 [0.961, 0.967] & 0.065 & 0.915 & 0.938
 MACRO & 20759 & 0.949 [0.945, 0.952] & 0.779 & 0.058 & 0.706 & 0.960 & 0.746 & 0.719 \\
 \bottomrule
 \end{tabular}
-\\[2pt]
-\footnotesize Point estimates are plug-in values; intervals are percentile bootstrap (1,000 resamples). Macro-AUC intervals resample studies once per draw and average all class AUCs within that draw. Threshold-dependent metrics use a fixed 0.5 threshold.
-\end{table}
+
+\vspace{2pt}
+{\footnotesize Point estimates are plug-in values; intervals are percentile bootstrap (1,000 resamples). Macro-AUC intervals resample studies once per draw and average all class AUCs within that draw. Threshold-dependent metrics use a fixed 0.5 threshold.}

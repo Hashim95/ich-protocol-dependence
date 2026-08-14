@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "Rare-Subtype Performance in Intracranial Hemorrhage Classification Is Protocol-Dependent"
+version: "1.0.0"
+date-released: "2026-08-14"
+license: MIT
+doi: "10.5281/zenodo.21891827"
+repository-code: "https://github.com/Hashim95/ich-protocol-dependence"
+authors:
+  - family-names: "Ayub"
+    given-names: "Hashim"
+    email: "i220201@nu.edu.pk"
+    orcid: "https://orcid.org/0009-0005-9100-4617"
+    affiliation: "National University of Computer and Emerging Sciences (FAST-NUCES), Islamabad"
+  - family-names: "Mujtaba"
+    given-names: "Hasan"
+    email: "hasan.mujtaba@nu.edu.pk"
+    affiliation: "National University of Computer and Emerging Sciences (FAST-NUCES), Islamabad"
+keywords:
+  - intracranial hemorrhage
+  - computed tomography
+  - class imbalance
+  - evaluation methodology
+  - reproducibility

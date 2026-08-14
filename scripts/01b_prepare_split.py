@@ -63,7 +63,7 @@ USAGE
     python 01b_prepare_split.py --dry-run       # report only, write nothing
     python 01b_prepare_split.py --test-frac 0.2 --seed 42
 """
-import argparse, json, hashlib, shutil, sys, datetime, os
+import argparse, json, hashlib, shutil, sys, datetime
 from pathlib import Path
 
 import numpy as np
@@ -71,7 +71,8 @@ import pandas as pd
 from sklearn.model_selection import StratifiedGroupKFold
 
 # ----------------------------------------------------------------------------- #
-ROOT = Path(os.environ.get("ICH_ROOT", "/path/to/rsna-intracranial-hemorrhage-detection"))
+ROOT     = Path("/home/ivision/Documents/Hashim/RSNA ICH Dataset/"
+                "rsna-intracranial-hemorrhage-detection")
 OUT_DIR  = ROOT / "manifests"
 SUBTYPES = ["epidural", "intraparenchymal", "intraventricular",
             "subarachnoid", "subdural"]

@@ -21,7 +21,7 @@ from pathlib import Path
 import pandas as pd, numpy as np
 warnings.filterwarnings("ignore")
 
-import os; CQ = Path(os.environ.get("ICH_CQ", "/path/to/CQ500"))
+CQ=Path("/home/ivision/Documents/Hashim/CQ500")
 OUT=CQ/"cq500_manifest.parquet"
 # our-order labels + the CQ500 column suffix each maps to
 OUR=["epidural","intraparenchymal","intraventricular","subarachnoid","subdural","any"]

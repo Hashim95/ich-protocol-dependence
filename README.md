@@ -53,7 +53,7 @@ are not redistributed here.
 
 ## Citation
 
-[to be added on acceptance]
+DOI: 10.5281/zenodo.21891827 (code), 10.5281/zenodo.21892318 (weights)
 
 ## Setup
 

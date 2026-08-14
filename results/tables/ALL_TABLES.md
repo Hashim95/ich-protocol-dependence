@@ -45,10 +45,10 @@
 | External validation  | None                              | Two independent cohorts         |
 | EDH F1               | 0.467                             | 0.166 (folds 0.105–0.229)       |
 | Average F1           | 0.746                             | 0.664 ± 0.005                   |
-| EDH AUC              | Not reported per class            | 0.905 ± 0.025                   |
+| EDH AUC              | 0.998                             | 0.905 ± 0.025                   |
 | EDH AP               | Not reported                      | 0.153 ± 0.054                   |
 
-*Per-fold EDH F1 varied by a factor of 2.2 (0.105–0.229) while average F1 remained stable at 0.664 ± 0.005, indicating that single-partition rare-class estimates carry variance far larger than aggregate metrics. Original values are as published; the re-implementation substitutes standard acute-hemorrhage intensity thresholds for the original's unpublished values and uses a matched backbone.*
+*Original values are as published: average F1 and epidural F1 from the original's class-wise F1 table, epidural AUC from its class-wise AUC table. Re-implementation values are pre-smoothing; the post-smoothing comparison is given in the Discussion. Per-fold EDH F1 varied by a factor of 2.2 (0.105–0.229) while average F1 remained stable at 0.664 ± 0.005, indicating that single-partition rare-class estimates carry variance far larger than aggregate metrics. The re-implementation substitutes standard acute-hemorrhage intensity thresholds for the original's unpublished values and uses a matched backbone.*
 
 ---
 
@@ -89,3 +89,36 @@
 | Any     |    7106 | 0.881 [0.866, 0.897]    | 0.847 |                     45.8 |                         1.2 |
 
 *Reviews per true positive is the reciprocal of positive predictive value. Decision curve analysis showed positive net benefit over both flag-all and flag-none strategies for every subtype.*
+
+---
+
+## Table 6
+
+**Held-out test performance, five-fold ensemble, scored once after all methodological decisions were final.**
+
+| Class   |   n pos | AUC [95% CI]         |    AP |   Brier |   Sens@0.5 |   Prec@0.5 |   F1@0.5 |
+|:--------|--------:|:---------------------|------:|--------:|-----------:|-----------:|---------:|
+| EDH     |      70 | 0.915 [0.891, 0.937] | 0.213 |   0.015 |      0.086 |      0.4   |    0.141 |
+| IPH     |    1049 | 0.973 [0.966, 0.979] | 0.947 |   0.043 |      0.882 |      0.9   |    0.891 |
+| IVH     |     756 | 0.984 [0.979, 0.990] | 0.955 |   0.032 |      0.89  |      0.886 |    0.888 |
+| SAH     |     798 | 0.946 [0.937, 0.956] | 0.861 |   0.063 |      0.719 |      0.813 |    0.763 |
+| SDH     |     785 | 0.946 [0.937, 0.955] | 0.847 |   0.062 |      0.726 |      0.825 |    0.772 |
+| Any     |    1776 | 0.975 [0.970, 0.980] | 0.976 |   0.046 |      0.921 |      0.941 |    0.931 |
+| MACRO   |    5234 | 0.957 [0.947, 0.966] | 0.8   |   0.043 |      0.704 |      0.794 |    0.731 |
+
+*The held-out partition was carved before development and written to a separate file that no training or model-selection code reads. Threshold-dependent metrics use a fixed 0.5 threshold.*
+
+---
+
+## Table 7
+
+**Comparison of our pipeline against the WsGSA re‑implementation (pooled out‑of‑fold predictions, slice‑level).**
+
+| Method             | EDH AUC              | EDH AP               | EDH F1@0.5           |   Positives |
+|:-------------------|:---------------------|:---------------------|:---------------------|------------:|
+| Ours (smoothed)    | 0.903 [0.896, 0.910] | 0.142 [0.129, 0.157] | 0.226 [0.211, 0.242] |       2,513 |
+| Ours (unsmoothed)  | 0.860 [0.852, 0.869] | 0.121 [0.109, 0.134] | 0.201 [0.188, 0.215] |       2,513 |
+| WsGSA (smoothed)   | 0.933 [0.929, 0.937] | 0.180 [0.164, 0.196] | 0.150 [0.133, 0.168] |       2,513 |
+| WsGSA (unsmoothed) | 0.906 [0.901, 0.911] | 0.142 [0.128, 0.158] | 0.167 [0.149, 0.186] |       2,513 |
+
+*All metrics are bootstrapped (2,000 resamples) with 95 % percentile intervals. Smoothing uses a 3×3 sliding window applied to logits before the sigmoid.*

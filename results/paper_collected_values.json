@@ -1,0 +1,29 @@
+{
+  "figure_studies": {
+    "True epidural": [
+      "ID_0c65d945b8",
+      "ID_3158f9597c",
+      "ID_87c1a85ae2",
+      "ID_d417ec6a1d"
+    ],
+    "True subdural, no epidural": [
+      "ID_da5d9fe141",
+      "ID_eff0031adf",
+      "ID_813608e237",
+      "ID_34e0d42cde"
+    ],
+    "Epidural false positives on subdural studies": [
+      "ID_58ef4eeee4",
+      "ID_594aba72fa",
+      "ID_21fa164048",
+      "ID_cce0a8f00e"
+    ],
+    "Near-threshold, $p_{\\mathrm{EDH}}\\in[0.4,0.6]$": [
+      "ID_2099bfe93b",
+      "ID_3ad4ccef46",
+      "ID_3072f20d43",
+      "ID_5fcaecda2d"
+    ]
+  },
+  "figure_slice_selection": "model-scored slice"
+}

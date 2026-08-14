@@ -32,7 +32,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 # ----------------------------------------------------------------------------- #
 # CONFIG  — edit ROOT if your data lives elsewhere; everything else is derived.
 # ----------------------------------------------------------------------------- #
-ROOT = Path(os.environ.get("ICH_ROOT", "/path/to/rsna-intracranial-hemorrhage-detection"))
+ROOT      = Path("/home/ivision/Documents/Hashim/RSNA ICH Dataset/rsna-intracranial-hemorrhage-detection")
 CSV       = ROOT / "stage_2_train.csv"
 DCM_DIR   = ROOT / "stage_2_train"
 OUT_DIR   = ROOT / "manifests"          # all cached outputs go here

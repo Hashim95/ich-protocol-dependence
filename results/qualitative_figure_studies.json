@@ -1,0 +1,74 @@
+{
+  "True epidural": [
+    {
+      "study": "ID_0c65d945b8",
+      "score": 1.0
+    },
+    {
+      "study": "ID_3158f9597c",
+      "score": 0.9999997615814209
+    },
+    {
+      "study": "ID_87c1a85ae2",
+      "score": 0.9999879598617554
+    },
+    {
+      "study": "ID_d417ec6a1d",
+      "score": 0.999955415725708
+    }
+  ],
+  "True subdural, no epidural": [
+    {
+      "study": "ID_da5d9fe141",
+      "score": 1.0
+    },
+    {
+      "study": "ID_eff0031adf",
+      "score": 1.0
+    },
+    {
+      "study": "ID_813608e237",
+      "score": 1.0
+    },
+    {
+      "study": "ID_34e0d42cde",
+      "score": 1.0
+    }
+  ],
+  "Epidural false positives on subdural studies": [
+    {
+      "study": "ID_58ef4eeee4",
+      "score": 0.999982476234436
+    },
+    {
+      "study": "ID_594aba72fa",
+      "score": 0.9999005794525146
+    },
+    {
+      "study": "ID_21fa164048",
+      "score": 0.9998784065246582
+    },
+    {
+      "study": "ID_cce0a8f00e",
+      "score": 0.9998475313186646
+    }
+  ],
+  "Near-threshold, $p_{\\mathrm{EDH}}\\in[0.4,0.6]$": [
+    {
+      "study": "ID_2099bfe93b",
+      "score": 0.5036733746528625
+    },
+    {
+      "study": "ID_3ad4ccef46",
+      "score": 0.5154755115509033
+    },
+    {
+      "study": "ID_3072f20d43",
+      "score": 0.48186352849006653
+    },
+    {
+      "study": "ID_5fcaecda2d",
+      "score": 0.5221226811408997
+    }
+  ]
+}

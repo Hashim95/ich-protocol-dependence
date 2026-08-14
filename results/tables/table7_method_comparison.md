@@ -1,0 +1,10 @@
+**Comparison of our pipeline against the WsGSA re‑implementation (pooled out‑of‑fold predictions, slice‑level).**
+
+| Method             | EDH AUC              | EDH AP               | EDH F1@0.5           |   Positives |
+|:-------------------|:---------------------|:---------------------|:---------------------|------------:|
+| Ours (smoothed)    | 0.903 [0.896, 0.910] | 0.142 [0.129, 0.157] | 0.226 [0.211, 0.242] |       2,513 |
+| Ours (unsmoothed)  | 0.860 [0.852, 0.869] | 0.121 [0.109, 0.134] | 0.201 [0.188, 0.215] |       2,513 |
+| WsGSA (smoothed)   | 0.933 [0.929, 0.937] | 0.180 [0.164, 0.196] | 0.150 [0.133, 0.168] |       2,513 |
+| WsGSA (unsmoothed) | 0.906 [0.901, 0.911] | 0.142 [0.128, 0.158] | 0.167 [0.149, 0.186] |       2,513 |
+
+*All metrics are bootstrapped (2,000 resamples) with 95 % percentile intervals. Smoothing uses a 3×3 sliding window applied to logits before the sigmoid.*

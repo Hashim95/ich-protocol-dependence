@@ -12,11 +12,10 @@ from pathlib import Path
 import torch
 
 # ----------------------------------------------------------------- paths
-# Override per-machine with:  export ICH_ROOT=/some/path
-ROOT      = Path(os.environ.get("ICH_ROOT",
-                 "/path/to/rsna-intracranial-hemorrhage-detection"))
-CQ_ROOT   = Path(os.environ.get("ICH_CQ",   "/path/to/CQ500"))
-BHSD_ROOT = Path(os.environ.get("ICH_BHSD", "/path/to/BHSD/archive"))
+# Override per-machine with: export ICH_ROOT=/path/to/rsna
+ROOT      = Path(os.environ.get("ICH_ROOT",   "/path/to/rsna-intracranial-hemorrhage-detection"))
+CQ_ROOT   = Path(os.environ.get("ICH_CQ",     "/path/to/CQ500"))
+BHSD_ROOT = Path(os.environ.get("ICH_BHSD",   "/path/to/BHSD/archive"))
 
 MAN_DIR    = ROOT / "manifests"
 MEMMAP_DIR = ROOT / "memmap"          # 00_preprocess writes here

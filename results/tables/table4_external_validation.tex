@@ -1,6 +1,3 @@
-\begin{table}[t]
-\centering
-\caption{External validation on two independent cohorts, neither used in development.}
 \begin{tabular}{lrrrrr}
 \toprule
 Cohort & Class & n pos & AUC [95% CI] & AP & F1@0.5 \\
@@ -19,6 +16,6 @@ BHSD (volume level) & SDH & 70 & 0.821 [0.757, 0.876] & 0.765 & 0.659 \\
 BHSD (volume level) & MACRO & 433 & 0.848 [0.783, 0.903] & 0.808 & 0.643 \\
 \bottomrule
 \end{tabular}
-\\[2pt]
-\footnotesize Average precision is not comparable across cohorts: EDH prevalence differs by an order of magnitude (1.6% internally, 2.6% in CQ500, 12.0% in BHSD). BHSD contains no hemorrhage-negative volumes and therefore evaluates subtype discrimination among positive scans rather than detection. EDH positive counts are small in both cohorts; intervals are reported throughout.
-\end{table}
+
+\vspace{2pt}
+{\footnotesize Average precision is not comparable across cohorts: EDH prevalence differs by an order of magnitude (1.6% internally, 2.6% in CQ500, 12.0% in BHSD). BHSD contains no hemorrhage-negative volumes and therefore evaluates subtype discrimination among positive scans rather than detection. EDH positive counts are small in both cohorts; intervals are reported throughout.}
