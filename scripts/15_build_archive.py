@@ -38,12 +38,13 @@ USAGE
 """
 import argparse, hashlib, json, os, shutil, sys, zipfile
 from datetime import date
+import os
 from pathlib import Path
 
-SCRIPTS = Path("/home/ivision/Documents/Hashim/VS Project files")
+SCRIPTS = Path(__file__).resolve().parent
 ROOT = Path(os.environ.get(
     "ICH_ROOT",
-    "/home/ivision/Documents/Hashim/RSNA ICH Dataset/rsna-intracranial-hemorrhage-detection"))
+    os.environ["ICH_ROOT"]))
 OUT = Path.home() / "zenodo_deposition"
 VERSION = "1.0.0"
 
@@ -165,7 +166,7 @@ are not redistributed here.
 
 ## Environment
 
-See `requirements_ivision.txt` and `requirements_celsius.txt`. All folds of a
+See `requirements.txt`. All folds of a
 given experiment were trained on a single machine.
 
 ## Model weights

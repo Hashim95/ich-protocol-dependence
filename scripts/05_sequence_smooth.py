@@ -23,11 +23,12 @@ Usage:
     # then: python 04c_slice_metrics.py --run stage1_ft_fold0_both_workstation --pred smoothed
 """
 import argparse, warnings
+import os
 from pathlib import Path
 import numpy as np
 warnings.filterwarnings("ignore")
 
-ROOT=Path("/home/ivision/Documents/Hashim/RSNA ICH Dataset/rsna-intracranial-hemorrhage-detection")
+ROOT=Path(os.environ["ICH_ROOT"])
 OUT_DIR=ROOT/"stage1_runs"
 
 

@@ -17,11 +17,12 @@ Usage:
     python 06_cq500_prepare.py
 """
 import re, warnings
+import os
 from pathlib import Path
 import pandas as pd, numpy as np
 warnings.filterwarnings("ignore")
 
-CQ=Path("/home/ivision/Documents/Hashim/CQ500")
+CQ=Path(os.environ.get("ICH_CQ", ""))
 OUT=CQ/"cq500_manifest.parquet"
 # our-order labels + the CQ500 column suffix each maps to
 OUR=["epidural","intraparenchymal","intraventricular","subarachnoid","subdural","any"]

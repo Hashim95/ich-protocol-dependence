@@ -45,6 +45,7 @@ USAGE
     python 06b_bhsd_prepare.py --phase evaluate   # 5-fold ensemble, slice + volume
 """
 import argparse, gzip, io, json, warnings
+import os
 from pathlib import Path
 
 import numpy as np
@@ -65,7 +66,7 @@ from ich_config import (ROOT, S1_DIR, ALL_COLS, SUBTYPES, WINDOWS,
 setup_hardware()
 
 BHSD = Path(__import__("os").environ.get(
-    "ICH_BHSD", "/home/ivision/Documents/Hashim/BHSD/archive"))
+    "ICH_BHSD", os.environ.get("ICH_BHSD", "")))
 OUT = ROOT / "bhsd"; OUT.mkdir(parents=True, exist_ok=True)
 RESULTS = ROOT / "results"; RESULTS.mkdir(parents=True, exist_ok=True)
 

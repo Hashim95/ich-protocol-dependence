@@ -19,6 +19,7 @@ import timm
 from tqdm import tqdm
 warnings.filterwarnings("ignore")
 
+import os
 ROOT = Path(os.environ.get("ICH_ROOT", "/path/to/rsna-intracranial-hemorrhage-detection"))
 MAN_DIR=ROOT/"manifests"; OUT_DIR=ROOT/"stage1_runs"
 SUBTYPES=["epidural","intraparenchymal","intraventricular","subarachnoid","subdural"]

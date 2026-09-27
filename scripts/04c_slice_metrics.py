@@ -26,13 +26,14 @@ Usage:
     python 04c_slice_metrics.py --run stage1_supcon_fold0_workstation   # after Monday
 """
 import argparse, warnings
+import os
 from pathlib import Path
 import numpy as np
 from sklearn.metrics import (roc_auc_score, average_precision_score,
                              f1_score, fbeta_score)
 warnings.filterwarnings("ignore")
 
-ROOT = Path("/home/ivision/Documents/Hashim/RSNA ICH Dataset/rsna-intracranial-hemorrhage-detection")
+ROOT = Path(os.environ["ICH_ROOT"])
 S1 = ROOT / "stage1_runs"
 # WsGSA class order for side-by-side: they list SAH,IPH,SDH,EDH,IVH + any.
 # We keep our order and label clearly.

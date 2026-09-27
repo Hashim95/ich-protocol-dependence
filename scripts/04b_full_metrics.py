@@ -22,13 +22,14 @@ Usage:
   python 04b_full_metrics.py --runs stage2_fold{F}_conditional_workstation --folds 0 1 2 3 4
 """
 import argparse, warnings
+import os
 from pathlib import Path
 import numpy as np
 from sklearn.metrics import (roc_auc_score, average_precision_score,
                              f1_score, fbeta_score)
 warnings.filterwarnings("ignore")
 
-ROOT = Path("/home/ivision/Documents/Hashim/RSNA ICH Dataset/rsna-intracranial-hemorrhage-detection")
+ROOT = Path(os.environ["ICH_ROOT"])
 RUNS = ROOT / "stage2_runs"
 SUBTYPES = ["epidural","intraparenchymal","intraventricular","subarachnoid","subdural"]
 ALL_COLS = SUBTYPES + ["any"]
